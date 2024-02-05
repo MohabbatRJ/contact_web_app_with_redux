@@ -32,7 +32,7 @@ export default function Contact({ contact, selectAll }) {
                     // onClick={() => setSelectAll(!selectAll)}
                     />
                 </td>
-                <td> <Avatar className="me-2" name={name} size="35" round={true} />  {name}</td>
+                <td> <Avatar className="me-2" name={name.split(' ').map(word => word.substring(0, 2).toUpperCase()).join('')}  size="35" round={true} />  {name}</td>
                 <td>{phone}</td>
                 <td>{email}</td>
                 <td className='actions'>
